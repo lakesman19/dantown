@@ -22,15 +22,15 @@ const Middle = () => {
     },
   ]
   return (
-    <div className='flex justify-between items-center w-[100%]'>
+    <div className='flex justify-between flex-col lg:flex-row gap-y-4 items-center w-[100%] gap-x-4 mb-5'>
       {imgData.map((item) => (
-        <div className='flex flex-col justify-center items-center rounded-[5px] border '>
-          <div className='p-[10px]'>
-            <img src={item.imgurl} width={100} height={200} />
+        <div className='flex flex-col justify-center items-center rounded-[15px] bg-[#E0F3F3] w-[100%] lg:w-1/3'>
+          <div className='p-[10px] lg:h-[200px] w-[100%] flex items-center justify-center'>
+            <img src={item.imgurl} className='lg:h-[100%] w-[30%] lg:w-[80%]' />
           </div>
-          <div className='bg-[white] p-[10px]'>
-            <h4>{item.h1}</h4>
-            <p>{item.p}</p>
+          <div className='bg-[white] w-[100%] p-[10px] text-center rounded-es-[15px] rounded-ee-[15px]'>
+            <h4 className='text-[#0F3F62] font-semibold'>{item.h1}</h4>
+            <p className='text-[#8695A0] text-sm'>{item.p}</p>
           </div>
         </div>
       ))}

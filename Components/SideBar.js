@@ -11,8 +11,8 @@ const SideBar = () => {
     <div
       className={`${
         isSidebarOpen
-          ? 'w-[220px] bg-[#fff] fixed h-[100%] py-9 overflow-auto shadow-[rgb(113 122 131 / 11%) 0px 7px 30px 0px;] transition-[all] ease duration-[.3s]'
-          : 'w-[80px] lg:w-[220px] bg-[#fff] fixed h-[100%] py-9 overflow-auto shadow-[rgb(113 122 131 / 11%) 0px 7px 30px 0px;] transition-[all]'
+          ? 'hidden w-[100%] lg:block lg:w-[220px] bg-[#fff] fixed h-[100%] py-9 overflow-auto shadow-[rgb(113 122 131 / 11%) 0px 7px 30px 0px;] transition-[all] ease duration-[.3s] '
+          : 'hidden w-[100%] md:block md:w-[80px] lg:w-[220px] bg-[#fff] fixed h-[100%] py-9 overflow-auto shadow-[rgb(113 122 131 / 11%) 0px 7px 30px 0px;] transition-[all]'
       }`}
     >
       <TopLinks />

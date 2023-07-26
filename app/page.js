@@ -3,8 +3,8 @@ import Main from '@/Components/Homepage/main/Main'
 
 export default function Home() {
   return (
-    <main className='w-[100%] flex justify-center items-center '>
-      <div className='w-[100%] flex justify-between items-center p-4 '>
+    <main className='w-[100%] flex justify-center items-center pb-5 '>
+      <div className=' w-[100%] flex-col md:flex-row flex justify-between items-cente '>
         <Main />
         <Aside />
       </div>

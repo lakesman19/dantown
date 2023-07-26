@@ -4,7 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-font-family: 'Outfit', sans-serif;
-font-family: 'Poppins', sans-serif;
+body {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+.smallside {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 1000;
+  background-color: white;
+  width: 70%;
+  height: 100vh;
+
+  animation: showmenu 300ms ease forwards;
+}
+@keyframes showmenu {
+  to {
+    left: 0;
+  }
+}
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  font-size: 20px;
+  color:#8695A0;
+  cursor: pointer;
 }
