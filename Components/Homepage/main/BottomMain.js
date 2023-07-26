@@ -65,7 +65,7 @@ const BottomMain = () => {
                       key={index}
                     ></div>
                     <p>{item.name}</p>
-                    <p>{item.icon}</p>
+                    <p className='text-[#FFD700]'>{item.icon}</p>
                   </td>
                   <td className='border-b p-2'>
                     <p

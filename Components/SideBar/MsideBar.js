@@ -2,6 +2,7 @@ import React from 'react'
 import { TopSideBarLinks, bottomSideBarLinks } from './SideBarLinks'
 import Link from 'next/link'
 import {FaTimes } from 'react-icons/fa'
+
 const MsideBar = ({ close }) => {
   return (
     <div className='smallside'>
