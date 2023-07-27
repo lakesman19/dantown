@@ -23,13 +23,14 @@ const TopLinks = () => {
         </div>
         <div className='topmeun w-[100%] text-[#8695A0] flex flex-col items-center gap-y-2 text-base '>
           {TopSideBarLinks.map((TopSideBarLink) => {
-            const isActivePath = pathname.startsWith(TopSideBarLink.path)
+            // const isActivePath = pathname.startsWith(TopSideBarLink.path)
             return (
               <Link
                 href={TopSideBarLink.path}
-                className={`w-[100%] hover:bg-[#E0F3F3] pl-3 py-2 ${
-                  isActivePath ? 'bg-[#E0F3F3]' : ''
-                }`}
+                className={`w-[100%] hover:bg-[#E0F3F3] pl-3 py-2 ${pathname === TopSideBarLink.path ? 'bg-[#E0F3F3]': ''}`}
+                // className={`w-[100%] hover:bg-[#E0F3F3] pl-3 py-2 ${
+                //   isActivePath ? 'bg-[#E0F3F3]' : ''
+                // }`}
               >
                 <div className='flex items-center text-base  w-[100%]  gap-x-4 capitalize'>
                   <div className='text-xl'>{TopSideBarLink.icon}</div>
