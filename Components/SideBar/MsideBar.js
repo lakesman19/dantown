@@ -2,8 +2,9 @@ import React from 'react'
 import { TopSideBarLinks, bottomSideBarLinks } from './SideBarLinks'
 import Link from 'next/link'
 import {FaTimes } from 'react-icons/fa'
-
+import { usePathname } from 'next/navigation'
 const MsideBar = ({ close }) => {
+    const pathname = usePathname()
   return (
     <div className='smallside'>
       <div className='flex flex-col gap-y-4 w-[100%] '>
@@ -20,7 +21,9 @@ const MsideBar = ({ close }) => {
           {TopSideBarLinks.map((TopSideBarLink) => (
             <Link
               href={TopSideBarLink.path}
-              className='w-[100%] hover:bg-[#E0F3F3] pl-3 py-2'
+              className={`w-[100%] hover:bg-[#E0F3F3] pl-3 py-2 ${
+                pathname === TopSideBarLink.path ? 'bg-[#E0F3F3]' : ''
+              }`}
               onClick={() => {
                 close(false)
               }}
