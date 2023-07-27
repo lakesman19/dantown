@@ -1,5 +1,6 @@
 import Wrapper from '@/Components/Wrapper'
 import './globals.css'
+// import 'public/css/globals.css'
 import { WrapperContext } from '@/context/WrapperContext/WrapperContext'
 
 export const metadata = {
