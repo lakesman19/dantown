@@ -1,27 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
+.smallside {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 1000;
+  background-color: white;
+  width: 70%;
+  height: 100vh;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  animation: showmenu 300ms ease forwards;
+}
+@keyframes showmenu {
+  to {
+    left: 0;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  font-size: 20px;
+  color:#8695A0;
+  cursor: pointer;
 }
