@@ -20,7 +20,10 @@ const MsideBar = ({ close }) => {
           {TopSideBarLinks.map((TopSideBarLink) => (
             <Link
               href={TopSideBarLink.path}
-              className='w-[100%] hover:bg-[#E0F3F3] pl-3 py-2 '
+              className='w-[100%] hover:bg-[#E0F3F3] pl-3 py-2'
+              onClick={() => {
+                close(false)
+              }}
             >
               <div className='flex items-center text-base  w-[100%]  gap-x-4 capitalize'>
                 <div className='text-xl'>{TopSideBarLink.icon}</div>
